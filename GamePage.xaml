@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Marking_App.GamePage"
+             Title="GamePage">
+    <AbsoluteLayout>
+        <!--Player 1 Info-->
+        <Frame
+            BackgroundColor="RosyBrown"
+            AbsoluteLayout.LayoutFlags="YProportional,WidthProportional"
+            AbsoluteLayout.LayoutBounds="0,0,0.5,150"            
+            Margin="0,0,0,0"
+            Padding="0,0,0,0">
+            <StackLayout 
+                Margin="0,0"
+                Padding="0,0">
+                <Label
+                    x:Name="P1_Name_lbl"
+                    HorizontalOptions="CenterAndExpand"
+                    FontAttributes="Bold"
+                    FontSize="Title"
+                    Text="--"
+                    HorizontalTextAlignment="Center"
+                    Padding="0,0"
+                    Margin="0,0"/>
+                <Label
+                    x:Name="P1_Skill_lbl"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Skill: -"
+                    FontAttributes="Bold"
+                    FontSize="Medium"/>
+                <Label
+                    x:Name="P1_Points_lbl"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Points: --/--"
+                    FontAttributes="Bold"
+                    FontSize="Medium"/>
+                <Label
+                    x:Name="P1_Turn_lbl"
+                    IsEnabled="False"
+                    IsVisible="false"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Shooting..."
+                    FontAttributes="Bold"
+                    FontSize="Title"/>
+            </StackLayout>
+        </Frame>
+        <!--Player 2 Info-->
+        <Frame
+            BackgroundColor="Gold"
+            AbsoluteLayout.LayoutFlags="XProportional,WidthProportional"
+            AbsoluteLayout.LayoutBounds="1,0,0.5,150"
+            Margin="0,0,0,0"
+            Padding="0,0,0,0">
+            <StackLayout>
+                <Label
+                    x:Name="P2_Name_lbl"
+                    HorizontalOptions="CenterAndExpand"
+                    FontAttributes="Bold"
+                    FontSize="Title"            
+                    Text="--"
+                    HorizontalTextAlignment="Center"
+                    Padding="0,0"
+                    Margin="0,0"/>
+                <Label
+                    x:Name="P2_Skill_lbl"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Skill: -"
+                    FontAttributes="Bold"
+                    FontSize="Medium"/>
+                <Label
+                    x:Name="P2_Points_lbl"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Points: --/--"
+                    FontAttributes="Bold"
+                    FontSize="Medium"/>
+                <Label
+                    x:Name="P2_Turn_lbl"
+                    IsEnabled="False"
+                    IsVisible="false"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Shooting..."
+                    FontAttributes="Bold"
+                    FontSize="Title"/>
+            </StackLayout>
+        </Frame>
+        <!--Game Info-->
+        <Frame
+            AbsoluteLayout.LayoutFlags="WidthProportional"
+            AbsoluteLayout.LayoutBounds="0,151,0.33,50"
+            Margin="0"
+            Padding="0">
+            <Label
+                x:Name="Innings_lbl"
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center"
+                Text="Innings: "
+                BackgroundColor="red"/>
+        </Frame>
+        <Frame
+            AbsoluteLayout.LayoutFlags="WidthProportional,XProportional"
+            AbsoluteLayout.LayoutBounds="0.5,151,0.33,50"
+            Margin="0"
+            Padding="0">
+            <Label
+                x:Name="Rack_lbl"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
+                Text="Rack: "
+                BackgroundColor="BlueViolet"/>
+        </Frame>
+        <Frame
+            AbsoluteLayout.LayoutFlags="WidthProportional,XProportional"
+            AbsoluteLayout.LayoutBounds="1,151,0.33,50"
+            Margin="0"
+            Padding="0">
+            <Label
+                x:Name="DeadBall_lbl"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
+                Text="Dead Balls: "
+                BackgroundColor="Sienna"/>
+        </Frame>
+        
+        <!--
+        9 Balls controls starts
+        -->
+        <HorizontalStackLayout 
+            HorizontalOptions="Start"
+            VerticalOptions="Start"
+            AbsoluteLayout.LayoutFlags="SizeProportional"
+            AbsoluteLayout.LayoutBounds="5,205,1,1">
+
+            <ImageButton
+                Clicked="BallPocketed"
+                WidthRequest="50"
+                Source="ball_1s"
+                x:Name="ball_1s"
+                HeightRequest="50"/>
+
+            <ImageButton
+                Clicked="BallPocketed"
+                WidthRequest="50"
+                Source="ball_2s"
+                x:Name="ball_2s"
+                HeightRequest="50"/>
+
+            <ImageButton
+                Clicked="BallPocketed"
+                WidthRequest="50"
+                Source="ball_3s"
+                x:Name="ball_3s"
+                HeightRequest="50"/>
+
+            <ImageButton
+                Clicked="BallPocketed"
+                WidthRequest="50"
+                x:Name="ball_4s"
+                Source="ball_4s"
+                HeightRequest="50"/>
+
+            <ImageButton
+                Clicked="BallPocketed"
+                WidthRequest="50"
+                x:Name="ball_5s"
+                Source="ball_5s"
+                HeightRequest="50"/>
+
+            <ImageButton
+                Clicked="BallPocketed"
+                WidthRequest="50"
+                x:Name="ball_6s"               
+                Source="ball_6s"
+                HeightRequest="50"/>
+
+            <ImageButton
+                Clicked="BallPocketed"
+                WidthRequest="50"
+                x:Name="ball_7s"
+                Source="ball_7s"
+                HeightRequest="50"/>
+
+        </HorizontalStackLayout>
+        <HorizontalStackLayout
+            HorizontalOptions="Center"
+            VerticalOptions="Start"
+            AbsoluteLayout.LayoutFlags="SizeProportional"
+            AbsoluteLayout.LayoutBounds="0,260,1,1">
+
+            <ImageButton
+                Clicked="BallPocketed"
+                WidthRequest="50"
+                x:Name="ball_8s"
+                Source="ball_8s"
+                HeightRequest="50"/>
+
+            <ImageButton
+                Clicked="BallPocketed"
+                WidthRequest="50"
+                x:Name="ball_9s"
+                Source="ball_9s"
+                HeightRequest="50"/>
+        </HorizontalStackLayout>
+        <!--
+        9 Balls controls end
+        -->
+
+        <!--
+        game controls
+        -->
+
+        <HorizontalStackLayout
+            VerticalOptions="End"
+            Margin="12,5"
+            AbsoluteLayout.LayoutFlags="PositionProportional,SizeProportional"
+            AbsoluteLayout.LayoutBounds="0,1,1,1">
+
+            <Button
+                Text="Undo"
+                Clicked="Undo_Last"
+                WidthRequest="85"/>
+            <Button
+                Text="Dead Ball"
+                Clicked="Dead_Ball"
+                WidthRequest="85"/>
+            <Button
+                Text="Safty"
+                Clicked="Safty_Played"
+                WidthRequest="85"/>
+            <Button
+                Text="Change"
+                Clicked="Change_Shooter"
+                WidthRequest="85"/>
+            
+
+
+        </HorizontalStackLayout>
+
+    </AbsoluteLayout>
+</ContentPage>
