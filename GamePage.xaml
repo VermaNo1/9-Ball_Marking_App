@@ -126,6 +126,7 @@
         9 Balls controls starts
         -->
         <HorizontalStackLayout 
+            StyleId="1"
             HorizontalOptions="Start"
             VerticalOptions="Start"
             AbsoluteLayout.LayoutFlags="SizeProportional"
@@ -135,12 +136,14 @@
                 Clicked="BallPocketed"
                 WidthRequest="50"
                 Source="ball_1s"
+                ClassId="balls"
                 x:Name="ball_1s"
                 HeightRequest="50"/>
 
             <ImageButton
                 Clicked="BallPocketed"
                 WidthRequest="50"
+                ClassId="balls"
                 Source="ball_2s"
                 x:Name="ball_2s"
                 HeightRequest="50"/>
@@ -148,6 +151,7 @@
             <ImageButton
                 Clicked="BallPocketed"
                 WidthRequest="50"
+                ClassId="balls"
                 Source="ball_3s"
                 x:Name="ball_3s"
                 HeightRequest="50"/>
@@ -155,6 +159,7 @@
             <ImageButton
                 Clicked="BallPocketed"
                 WidthRequest="50"
+                ClassId="balls"
                 x:Name="ball_4s"
                 Source="ball_4s"
                 HeightRequest="50"/>
@@ -162,6 +167,7 @@
             <ImageButton
                 Clicked="BallPocketed"
                 WidthRequest="50"
+                ClassId="balls"
                 x:Name="ball_5s"
                 Source="ball_5s"
                 HeightRequest="50"/>
@@ -169,6 +175,7 @@
             <ImageButton
                 Clicked="BallPocketed"
                 WidthRequest="50"
+                ClassId="balls"
                 x:Name="ball_6s"               
                 Source="ball_6s"
                 HeightRequest="50"/>
@@ -176,12 +183,14 @@
             <ImageButton
                 Clicked="BallPocketed"
                 WidthRequest="50"
+                ClassId="balls"
                 x:Name="ball_7s"
                 Source="ball_7s"
                 HeightRequest="50"/>
 
         </HorizontalStackLayout>
         <HorizontalStackLayout
+            StyleId="1"
             HorizontalOptions="Center"
             VerticalOptions="Start"
             AbsoluteLayout.LayoutFlags="SizeProportional"
@@ -190,6 +199,7 @@
             <ImageButton
                 Clicked="BallPocketed"
                 WidthRequest="50"
+                ClassId="balls"
                 x:Name="ball_8s"
                 Source="ball_8s"
                 HeightRequest="50"/>
@@ -197,6 +207,7 @@
             <ImageButton
                 Clicked="BallPocketed"
                 WidthRequest="50"
+                ClassId="balls"
                 x:Name="ball_9s"
                 Source="ball_9s"
                 HeightRequest="50"/>
@@ -217,10 +228,12 @@
 
             <Button
                 Text="Undo"
+                x:Name="UndoBTN"
                 Clicked="Undo_Last"
                 WidthRequest="85"/>
             <Button
                 Text="Dead Ball"
+                x:Name="DeadballBTN"
                 Clicked="Dead_Ball"
                 WidthRequest="85"/>
             <Button

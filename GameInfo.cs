@@ -19,8 +19,7 @@ namespace Marking_App
             pocketed,
             dead,
             safty,
-            breakShot,
-            turn
+            breakShot
         }
     
     public class GameInfo
@@ -36,6 +35,7 @@ namespace Marking_App
             //done = (ActionDone)Enum.Parse(typeof(ActionDone), d);
             done = d;
             shooter = s;
+           
         }
 
         
